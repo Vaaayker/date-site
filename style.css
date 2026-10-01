@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff7f8;
+    color: #4a3035;
+}
+
+main {
+    width: 100%;
+}
+
+.page {
+    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 25px;
+}
+
+.content {
+    width: min(700px, 100%);
+    text-align: center;
+}
+
+.content-wide {
+    width: min(850px, 100%);
+}
+
+h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 45px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    line-height: 1.75;
+}
+
+.page-first {
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 190, 200, 0.25),
+            transparent 35%
+        ),
+        #fff7f8;
+}
+
+.page-second {
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(255, 210, 180, 0.2),
+            transparent 35%
+        ),
+        #fffaf5;
+}
+
+.page-third {
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255, 180, 200, 0.25),
+            transparent 45%
+        ),
+        #fff7f8;
+}
+
+.ps {
+    position: absolute;
+    right: 40px;
+    bottom: 90px;
+
+    max-width: 330px;
+}
+
+.ps p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-style: italic;
+    text-align: right;
+}
+
+.date-option {
+    margin-bottom: 32px;
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 20px;
+
+    box-shadow: 0 8px 30px rgba(100, 50, 60, 0.06);
+}
+
+.date-option p + p {
+    margin-top: 12px;
+}
+
+.final-note {
+    margin-top: 40px;
+}
+
+.next-button {
+    position: absolute;
+    bottom: 30px;
+
+    border: none;
+    background: transparent;
+
+    color: #9b5966;
+    font-family: inherit;
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    padding: 12px 25px;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+.next-button:hover {
+    color: #6f3542;
+    transform: translateY(4px);
+}
+
+.back-button:hover {
+    transform: translateY(-4px);
+}
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 45px 20px 90px;
+    }
+
+    .ps {
+        position: static;
+        margin-top: 50px;
+
+        max-width: 100%;
+    }
+
+    .ps p {
+        text-align: center;
+    }
+
+    .date-option {
+        padding: 20px;
+    }
+
+    .next-button {
+        bottom: 20px;
+    }
+}
